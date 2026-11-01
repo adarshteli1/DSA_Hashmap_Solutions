@@ -8,7 +8,7 @@ func HappyNumber(n int) bool {
 		}
 		m[n] = true
 		sum := 0
-		for n > 9 {
+		for n > 0 {
 			digit := n % 10
 			sum += digit * digit
 			n /= 10
