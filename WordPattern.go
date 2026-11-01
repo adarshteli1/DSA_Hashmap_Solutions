@@ -5,7 +5,10 @@ import "strings"
 func WordPattern(s string, pattern string) bool {
 	m1 := make(map[byte]string)
 	m2 := make(map[string]byte)
-	p := strings.Fields(pattern)
+	p := strings.Fields(s)
+	if len(pattern) != len(p) {
+		return false
+	}
 	for i := 0; i < len(s); i++ {
 		if value, exists := m1[s[i]]; exists {
 			if value != p[i] {
